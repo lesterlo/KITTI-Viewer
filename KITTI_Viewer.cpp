@@ -264,8 +264,8 @@ KITTI_Viewer::onInsertLabelButtonClicked()
   newLabel.y_min = 0.0;
   newLabel.x_max = 0.0;
   newLabel.y_max = 0.0;
-  newLabel.obj_height = 0.0;
   newLabel.obj_width = 0.0;
+  newLabel.obj_height = 0.0;
   newLabel.obj_length = 0.0;
   newLabel.obj_x = 0.0;
   newLabel.obj_y = 0.0;
@@ -543,9 +543,9 @@ KITTI_Viewer::read_label() //Read the label of the current pointcloud
         >> label_in_file.y_min
         >> label_in_file.x_max
         >> label_in_file.y_max
-        >> label_in_file.obj_height
-        >> label_in_file.obj_width
         >> label_in_file.obj_length
+        >> label_in_file.obj_width
+        >> label_in_file.obj_height
         >> label_in_file.obj_x
         >> label_in_file.obj_y
         >> label_in_file.obj_z
@@ -620,9 +620,9 @@ KITTI_Viewer::write_label()
       << item.y_min << ' '
       << item.x_max << ' '
       << item.y_max << ' '
-      << item.obj_height << ' '
-      << item.obj_width << ' '
       << item.obj_length << ' '
+      << item.obj_width << ' '
+      << item.obj_height << ' '
       << item.obj_x << ' '
       << item.obj_y << ' '
       << item.obj_z << ' '
